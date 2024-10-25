@@ -1,0 +1,21 @@
+# There are many pre-built hooks that can be added.
+# You can see the list here: https://pre-commit.com/hooks.html
+# Adding a hook to this list will add it to all newly created repos.
+# Once added to a repo, this file is safe to edit and will not be overwritten.
+---
+repos:
+  - repo: https://github.com/zricethezav/gitleaks
+    # The GitHub action uses `latest` but that isn't supported here
+    rev: v8.15.0
+    hooks:
+      - id: gitleaks
+  - repo: local
+    hooks:
+      - id: per-repo-hooks
+        name: Repo-specific Hooks
+        # We add an extra argument because pre-commit chops off an argument. The
+        # dummy argument at the end ensures that "$@" actually contains all files
+        # that were changed in the commit.
+        entry: bash -c 'if [[ -f .pre-commit-config.local.yaml ]]; then pre-commit run --config=.pre-commit-config.local.yaml --files "$@"; fi' 'shifter'
+        language: system
+
