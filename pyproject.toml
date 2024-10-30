@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "groq-gradio"
-version = "0.0.1"
+version = "0.0.2"
 description = "A Python package for creating Gradio applications with Groq models"
 authors = [
     { name = "Hatice Ozen", email = "hozen@groq.com" }
