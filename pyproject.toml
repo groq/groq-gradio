@@ -7,7 +7,10 @@ name = "groq-gradio"
 version = "0.0.1"
 description = "A Python package for creating Gradio applications with Groq models"
 authors = [
-    { name = "AK", email = "ahsen.khaliq@gmail.com" }
+    { name = "Hatice Ozen", email = "hozen@groq.com" }
+]
+additional_authors = [
+    { name = "AK", email = "ahsenkhaliq@gmail.com" }
 ]
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,8 +25,8 @@ dependencies = [
 ]
 
 [project.urls]
-homepage = "https://github.com/AK391/groq-gradio"
-repository = "https://github.com/AK391/groq-gradio"
+homepage = "https://github.com/groq/groq-gradio"
+repository = "https://github.com/groq/groq-gradio"
 
 [project.optional-dependencies]
 dev = ["pytest"]
