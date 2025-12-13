@@ -1,2 +1,2 @@
 groq
-gradio==5.0.0
+gradio==5.11.0
